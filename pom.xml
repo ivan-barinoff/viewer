@@ -11,6 +11,7 @@
 
     <modules>
         <module>api-gateway</module>
+        <module>discovery-service</module>
         <module>movies-service</module>
         <module>tv-shows-service</module>
     </modules>

@@ -6,3 +6,5 @@
 /tv-shows-service/*.iml
 /api-gateway/*.iml
 /api-gateway/target
+/discovery-service/target
+/discovery-service/*.iml
