@@ -8,3 +8,5 @@
 /api-gateway/target
 /discovery-service/target
 /discovery-service/*.iml
+/rating-service/*.iml
+/rating-service/target
