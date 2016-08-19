@@ -4,3 +4,5 @@
 /movies-service/*.iml
 /tv-shows-service/target
 /tv-shows-service/*.iml
+/api-gateway/*.iml
+/api-gateway/target
