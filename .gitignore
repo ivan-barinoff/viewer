@@ -1,0 +1,6 @@
+/*.iml
+/.idea
+/movies-service/target
+/movies-service/*.iml
+/tv-shows-service/target
+/tv-shows-service/*.iml
