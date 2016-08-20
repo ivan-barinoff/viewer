@@ -11,8 +11,8 @@
 
     <modules>
         <module>api-gateway</module>
-
         <module>discovery-service</module>
+        <module>monitoring</module>
 
         <module>rating-service</module>
         <module>movies-service</module>
