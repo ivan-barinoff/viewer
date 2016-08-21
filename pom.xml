@@ -14,6 +14,7 @@
         <module>discovery-service</module>
         <module>monitoring</module>
         <module>trace-service</module>
+        <module>config-server</module>
 
         <module>rating-service</module>
         <module>movies-service</module>
