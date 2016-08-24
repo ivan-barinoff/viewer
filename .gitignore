@@ -10,3 +10,6 @@
 /discovery-service/*.iml
 /rating-service/*.iml
 /rating-service/target
+/trace-service/*.iml
+/monitoring/*.iml
+/config-server/*.iml
