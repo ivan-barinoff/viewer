@@ -1,0 +1,44 @@
+version: '2'
+services:
+  config-server:
+    image: config-server
+    container_name: config-server
+    ports:
+      - 8888:8888
+    restart: always
+  api-gateway:
+    image: api-gateway
+    container_name: api-gateway
+    ports:
+      - 8080:8080
+    depends_on:
+      - config-server
+      - discovery-service
+    restart: always
+  discovery-service:
+    image: discovery-service
+    container_name: discovery-service
+    ports:
+      - 8761:8761
+    depends_on:
+      - config-server
+    restart: always
+  movies-service:
+    image: movies-service
+    container_name: movies-service
+    ports:
+      - 8090:8090
+    depends_on:
+      - config-server
+      - discovery-service
+    restart: always
+  rating-service:
+    image: rating-service
+    container_name: rating-service
+    ports:
+      - 8060:8060
+    depends_on:
+      - config-server
+      - discovery-service
+      - movies-service
+    restart: always
