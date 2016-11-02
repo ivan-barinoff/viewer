@@ -1,11 +1,24 @@
 version: '2'
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 15672:15672
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
   config-server:
     image: config-server
     container_name: config-server
     ports:
       - 8888:8888
     restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
   api-gateway:
     image: api-gateway
     container_name: api-gateway
@@ -15,6 +28,10 @@ services:
       - config-server
       - discovery-service
     restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
   discovery-service:
     image: discovery-service
     container_name: discovery-service
@@ -23,6 +40,10 @@ services:
     depends_on:
       - config-server
     restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
   movies-service:
     image: movies-service
     container_name: movies-service
@@ -32,6 +53,10 @@ services:
       - config-server
       - discovery-service
     restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
   rating-service:
     image: rating-service
     container_name: rating-service
@@ -42,3 +67,7 @@ services:
       - discovery-service
       - movies-service
     restart: always
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "10"
