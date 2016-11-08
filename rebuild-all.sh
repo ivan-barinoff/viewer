@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cd config-server
 docker build -t config-server .
 cd ../api-gateway
