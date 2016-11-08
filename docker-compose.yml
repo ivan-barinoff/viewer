@@ -4,6 +4,7 @@ services:
     image: rabbitmq:3-management
     restart: always
     ports:
+      - 15672:15672
       - 5672:5672
     logging:
       options:
@@ -102,6 +103,7 @@ services:
     container_name: monitoring
     ports:
       - 8020:8020
+      - 8989:8989
     depends_on:
       - config-server
       - discovery-service
