@@ -26,6 +26,7 @@ services:
     ports:
       - 8080:8080
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
     restart: always
@@ -51,6 +52,7 @@ services:
     ports:
       - 8090:8090
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
     restart: always
@@ -64,6 +66,7 @@ services:
     ports:
       - 8070:8070
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
     restart: always
@@ -77,6 +80,7 @@ services:
     ports:
       - 8060:8060
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
       - movies-service
@@ -105,6 +109,7 @@ services:
     ports:
       - 9411:9411
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
     restart: always
@@ -119,6 +124,7 @@ services:
       - 8020:8020
       - 8989:8989
     depends_on:
+      - rabbitmq
       - config-server
       - discovery-service
     restart: always
