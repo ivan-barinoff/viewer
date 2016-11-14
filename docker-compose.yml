@@ -85,6 +85,20 @@ services:
       options:
         max-size: "10m"
         max-file: "10"
+  comments-service:
+      image: comments-service
+      container_name: comments-service
+      ports:
+        - 8095:8095
+      depends_on:
+        - config-server
+        - discovery-service
+        - movies-service
+      restart: always
+      logging:
+        options:
+          max-size: "10m"
+          max-file: "10"
   trace-service:
     image: trace-service
     container_name: trace-service

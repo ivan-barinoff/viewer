@@ -15,3 +15,5 @@ cd ../trace-service
 docker build -t trace-service .
 cd ../tv-shows-service
 docker build -t tv-shows-service .
+cd ../comments-service
+docker build -t comments-service .

@@ -13,4 +13,6 @@
 /trace-service/*.iml
 /monitoring/*.iml
 /config-server/*.iml
+/comments-service/target
+/comments-service/*.iml
 target

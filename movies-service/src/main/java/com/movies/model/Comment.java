@@ -5,14 +5,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
-
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class Movie {
-    private String name;
-    private Integer rating;
-    private List<Comment> comments;
+@NoArgsConstructor
+public class Comment {
+    private String text;
+    private User user;
 }
