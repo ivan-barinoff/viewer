@@ -8,7 +8,7 @@ The project contains a few microservices.
 * Config Service http://{docker_machine}:8888/
 * Trace Service uses Zipkin http://{docker_machine}:9411/
 * RabbitMQ http://{docker_machine}:15672/
-* Hystrix dashboard http://{docker_machine}/hystrix
+* Hystrix dashboard http://{docker_machine}:8080/hystrix
 
 The following microservices are working with each other via Feign client.There is a small example with Reactor
 
